@@ -27,6 +27,7 @@ def test_get_books_filters_books_published_after_2000():
     assert len(result) == 1
     assert result[0].title == "New Book"
 
+
 def test_get_books_sorts_and_limits_results():
     # Arrange
     books = [

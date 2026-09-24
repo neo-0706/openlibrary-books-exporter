@@ -14,11 +14,12 @@ class OpenLibraryClient:
         self.timeout = timeout
         self.user_agent = user_agent
 
-    def search_books(self, query: str, limit: int) -> list[Book]:
+    def search_books(self, query: str, limit: int, page: int = 1) -> list[Book]:
         params = {
             "q": query,
             "fields": "key,title,author_name,first_publish_year",
             "limit": limit,
+            "page": page,
         }
 
         headers = {

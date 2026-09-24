@@ -33,6 +33,7 @@ def test_search_books_returns_books():
     assert isinstance(books[0], Book)
     assert books[0].title == "The Hobbit"
 
+
 def test_search_books_raises_for_http_error():
     # Arrange
     fake_response = Mock()

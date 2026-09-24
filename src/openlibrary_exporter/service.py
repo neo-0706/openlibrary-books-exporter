@@ -11,4 +11,7 @@ class BookService:
             for book in self.books
             if book.first_publish_year > 2000
         ]
-        return result
+
+        result.sort(key=lambda book: (book.first_publish_year, book.title))
+
+        return result[:50]

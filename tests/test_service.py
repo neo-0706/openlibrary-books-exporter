@@ -26,3 +26,23 @@ def test_get_books_filters_books_published_after_2000():
     # Assert
     assert len(result) == 1
     assert result[0].title == "New Book"
+
+def test_get_books_sorts_and_limits_results():
+    # Arrange
+    books = [
+        Book("/works/1", "Zebra", ["Author"], 2005),
+        Book("/works/2", "Apple", ["Author"], 2003),
+        Book("/works/3", "Book", ["Author"], 2003),
+        Book("/works/4", "Old Book", ["Author"], 1999),
+    ]
+
+    service = BookService(books)
+
+    # Act
+    result = service.get_books()
+
+    # Assert
+    assert len(result) == 3
+    assert result[0].title == "Apple"
+    assert result[1].title == "Book"
+    assert result[2].title == "Zebra"

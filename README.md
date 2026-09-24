@@ -89,6 +89,7 @@ The application follows a simple separation of responsibilities:
             │
             ▼
         output/books.csv
+```
 
 ## ⚙️ Requirements
 

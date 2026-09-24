@@ -60,6 +60,7 @@ openlibrary-books-exporter/
 ├── pyproject.toml
 ├── requirements.txt
 └── README.md
+```
 
 ## Architecture
 The application follows a simple separation of responsibilities:

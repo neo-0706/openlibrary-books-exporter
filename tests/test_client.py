@@ -1,6 +1,7 @@
+from unittest.mock import Mock, patch
+
 import pytest
 import requests
-from unittest.mock import Mock, patch
 
 from openlibrary_exporter.client import OpenLibraryClient
 from openlibrary_exporter.models import Book
